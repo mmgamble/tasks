@@ -19,7 +19,7 @@ function App(): JSX.Element {
 
             <h1>This is super cool!</h1>
 
-            <img src={require("./meme.png")} alt="This is a meme" />
+            <img src={require("./memeCopy.png")} alt="This is a meme" />
 
             <div>
                 <ul>
