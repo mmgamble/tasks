@@ -16,16 +16,13 @@ export function add3(first: number, second: number, third: number): number {
     let addsecond: number = second;
     let addthird: number = third;
 
-    if (first > 0) {
-    } else {
+    if (first <= 0) {
         addfirst = 0;
     }
-    if (second > 0) {
-    } else {
+    if (second <= 0) {
         addsecond = 0;
     }
-    if (third > 0) {
-    } else {
+    if (third <= 0) {
         addthird = 0;
     }
 
@@ -54,11 +51,9 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    let wordlower: string = word.toLowerCase();
-
-    if (wordlower === "yes") {
+    if (word.toLowerCase() === "yes") {
         return true;
-    } else if (wordlower === "no") {
+    } else if (word.toLowerCase() === "no") {
         return false;
     } else {
         return null;
