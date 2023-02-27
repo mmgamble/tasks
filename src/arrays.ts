@@ -94,7 +94,7 @@ export function countShortWords(words: string[]): number {
  */
 export function allRGB(colors: string[]): boolean {
     const colors1 = [...colors];
-    if (length.colors1 == 0) {
+    if (colors1[0] === "") {
         return true;
     } else {
         const rgb = colors1.every(
@@ -162,7 +162,7 @@ export function injectPositive(values: number[]): number[] {
             (total: number, num: number) => total + num,
             0
         );
-        const addneg = values1.splice(negative + 1, 0, sumnums);
+        values1.splice(negative + 1, 0, sumnums);
         return values1;
     }
 }
