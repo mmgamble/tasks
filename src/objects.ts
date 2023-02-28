@@ -89,7 +89,22 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const q1 = { ...question, options: [...question.options] };
+
+    if (q1.options.length > 0) {
+        const formatted =
+            "# " +
+            q1.name +
+            "\n" +
+            q1.body +
+            "\n" +
+            "- " +
+            q1.options.join("\n- ");
+        return formatted;
+    } else {
+        const formatted = "# " + q1.name + "\n" + q1.body;
+        return formatted;
+    }
 }
 
 /**
