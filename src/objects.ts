@@ -55,6 +55,8 @@ export function isValid(question: Question, answer: string): boolean {
         } else {
             return false;
         }
+    } else {
+        return false;
     }
 }
 
