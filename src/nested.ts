@@ -226,7 +226,21 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    if (newQuestionType === "multiple_choice_question") {
+        const qcopy = questions.map(
+            (q: Question): Question =>
+                q.id === targetId ? { ...q, type: newQuestionType } : { ...q }
+        );
+        return qcopy;
+    } else {
+        const qcopy = questions.map(
+            (q: Question): Question =>
+                q.id === targetId
+                    ? { ...q, type: newQuestionType, options: [] }
+                    : { ...q }
+        );
+        return qcopy;
+    }
 }
 
 /**
@@ -245,7 +259,29 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    console.log(newOption);
+    if (targetOptionIndex === -1) {
+        const qcopy = questions.map(
+            (q: Question): Question =>
+                q.id === targetId
+                    ? { ...q, options: [...q.options, newOption] }
+                    : { ...q }
+        );
+        return qcopy;
+    } else {
+        const qcopy = questions.map(
+            (q: Question): Question => ({ ...q, options: [...q.options] })
+        );
+        const find = qcopy.findIndex(
+            (q: Question): boolean => q.id === targetId
+        );
+        console.log(targetOptionIndex);
+        console.log(qcopy[find]);
+        qcopy[find].options.splice(targetOptionIndex, 1, newOption);
+        console.log(qcopy[find]);
+
+        return qcopy;
+    }
 }
 
 /***
