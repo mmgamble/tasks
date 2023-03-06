@@ -133,7 +133,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const qcopy = questions.map(
+        (q: Question): Answer => ({
+            submitted: false,
+            correct: false,
+            questionId: q.id,
+            text: ""
+        })
+    );
+    return qcopy;
 }
 
 /***
@@ -141,7 +149,11 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const qcopy = questions.map(
+        (q: Question): Question => ({ ...q, published: true })
+    );
+
+    return qcopy;
 }
 
 /***
