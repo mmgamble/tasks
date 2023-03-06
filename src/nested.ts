@@ -37,7 +37,14 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const qcopy = questions.map((q: Question): Question => ({ ...q }));
+    const filter = qcopy.filter((q1: Question): boolean => q1.id === id);
+
+    if (filter.length > 0) {
+        return filter[0];
+    } else {
+        return null;
+    }
 }
 
 /**
