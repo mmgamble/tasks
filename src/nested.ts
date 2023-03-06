@@ -180,7 +180,20 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const newarr = [
+        ...questions,
+        {
+            name: name,
+            type: type,
+            id: id,
+            body: "",
+            expected: "",
+            options: [],
+            points: 1,
+            published: false
+        }
+    ];
+    return newarr;
 }
 
 /***
