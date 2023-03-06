@@ -52,7 +52,9 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const qcopy = questions.map((q: Question): Question => ({ ...q }));
+    const filter = qcopy.filter((q1: Question): boolean => q1.id != id);
+    return filter;
 }
 
 /***
