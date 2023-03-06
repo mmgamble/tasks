@@ -71,14 +71,23 @@ export function getNames(questions: Question[]): string[] {
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    const qcopy = questions.map((q: Question): Question => ({ ...q }));
+    const qpoints = qcopy.map((q: Question): number => q.points);
+    const sum = qpoints.reduce((total: number, num: number) => total + num, 0);
+    return sum;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    const qcopy = questions.map((q: Question): Question => ({ ...q }));
+    const filter = qcopy.filter(
+        (q1: Question): boolean => q1.published === true
+    );
+    const qpoints = filter.map((q: Question): number => q.points);
+    const sum = qpoints.reduce((total: number, num: number) => total + num, 0);
+    return sum;
 }
 
 /***
