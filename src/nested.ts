@@ -108,7 +108,23 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const qcopy = questions.map((q: Question): Question => ({ ...q }));
+    const start = "id,name,options,points,published\n";
+    const newarr = qcopy.map(
+        (q: Question): string =>
+            q.id +
+            "," +
+            q.name +
+            "," +
+            q.options.length +
+            "," +
+            q.points +
+            "," +
+            q.published
+    );
+    const joined = newarr.join("\n");
+
+    return start + joined;
 }
 
 /**
