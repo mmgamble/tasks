@@ -259,7 +259,6 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    console.log(newOption);
     if (targetOptionIndex === -1) {
         const qcopy = questions.map(
             (q: Question): Question =>
@@ -275,10 +274,8 @@ export function editOption(
         const find = qcopy.findIndex(
             (q: Question): boolean => q.id === targetId
         );
-        console.log(targetOptionIndex);
-        console.log(qcopy[find]);
+
         qcopy[find].options.splice(targetOptionIndex, 1, newOption);
-        console.log(qcopy[find]);
 
         return qcopy;
     }
@@ -295,5 +292,17 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const qcopy = questions.map(
+        (q: Question): Question => ({ ...q, options: [...q.options] })
+    );
+    const find = qcopy.findIndex((q: Question): boolean => q.id === targetId);
+    const newq = {
+        ...qcopy[find],
+        name: "Copy of " + qcopy[find].name,
+        id: newId,
+        published: false
+    };
+    qcopy.splice(find + 1, 0, newq);
+
+    return qcopy;
 }
