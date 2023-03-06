@@ -16,7 +16,8 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    const filtered = questions.filter(
+    const qcopy = questions.map((q: Question): Question => ({ ...q }));
+    const filtered = qcopy.filter(
         (q2: Question): boolean =>
             !(
                 q2.body.length === 0 &&
