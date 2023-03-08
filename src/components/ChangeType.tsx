@@ -2,7 +2,7 @@
 //disabled indent, prettier was fighting with error messages for needing 16/20 spaces
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { QuestionType } from "../interfaces/question";
+//import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
     const [qtype, setqtype] = useState<string>("short_answer_question");
