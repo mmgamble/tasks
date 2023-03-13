@@ -12,9 +12,7 @@ function Doubler({ setdhvalue, dhValue }: numprops): JSX.Element {
 
 function Halver({ setdhvalue, dhValue }: numprops): JSX.Element {
     return <Button onClick={() => setdhvalue(0.5 * dhValue)}>Halve</Button>;
-    //setDhValue(2 * dhValue);
 }
-// dhValue }: { dhValue: number }
 
 export function DoubleHalf(): JSX.Element {
     const [dhValue, setdhvalue] = useState<number>(10);
