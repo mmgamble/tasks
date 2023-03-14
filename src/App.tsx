@@ -27,8 +27,6 @@ function App(): JSX.Element {
                 automatically reload. Meghan Gamble
             </p>
 
-            <h1>This is super cool!</h1>
-
             <img src={require("./memeCopy.png")} alt="This is a meme" />
 
             <div>
