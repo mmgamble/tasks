@@ -11,16 +11,13 @@ const PEOPLE = [
 ];
 
 export function ChooseTeam(): JSX.Element {
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
+    const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
-    const [newMember, setNewMember] = useState<string>("");
 
     function chooseMember(newMember: string) {
-        setNewMember(newMember);
         if (!team.includes(newMember)) {
             const newteam = [...team, newMember];
             setTeam(newteam);
-            // team.push(newMember);
         }
     }
 
