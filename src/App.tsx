@@ -11,6 +11,10 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): JSX.Element {
     return (
@@ -22,8 +26,6 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Meghan Gamble
             </p>
-
-            <h1>This is super cool!</h1>
 
             <img src={require("./memeCopy.png")} alt="This is a meme" />
 
@@ -62,20 +64,21 @@ function App(): JSX.Element {
                 </Button>
             </div>
 
-            <hr></hr>
+            {<DoubleHalf></DoubleHalf>}
+            <ChooseTeam></ChooseTeam>
+            <ColoredBox></ColoredBox>
+            <ShoveBox></ShoveBox>
             <Counter></Counter>
-            <hr />
             <RevealAnswer></RevealAnswer>
-            <hr />
             <StartAttempt></StartAttempt>
-            <hr />
             <TwoDice></TwoDice>
-            <hr />
             <ChangeType></ChangeType>
-            <hr />
             <CycleHoliday></CycleHoliday>
         </div>
     );
 }
+
+//            <h1></h1>
+//            <h1 />;
 
 export default App;
