@@ -32,15 +32,14 @@ function MoveableBox(props: boxprops): JSX.Element {
 export function ShoveBox(): JSX.Element {
     const [position, setPosition] = useState<number>(10);
 
-    //const box = MoveableBox;
+    //const box = MoveableBox();
+    //{ MoveableBox; }
 
     return (
         <div>
             <h3>Shove Box</h3>
             <span>The box is at: {position}</span>
             <div>
-                {MoveableBox}
-
                 <ShoveBoxButton
                     position={position}
                     setPosition={setPosition}

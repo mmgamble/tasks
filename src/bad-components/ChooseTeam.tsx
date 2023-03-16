@@ -34,7 +34,7 @@ export function ChooseTeam(): JSX.Element {
     //size = "sm";
     return (
         <div>
-            <h3>Choose Team</h3>
+            Choose Team
             <Row>
                 <Col>
                     {allOptions.map((option: string) => (

@@ -64,28 +64,21 @@ function App(): JSX.Element {
                 </Button>
             </div>
 
-            <hr></hr>
             {<DoubleHalf></DoubleHalf>}
-            <hr></hr>
             <ChooseTeam></ChooseTeam>
-            <hr></hr>
             <ColoredBox></ColoredBox>
-            <hr></hr>
             <ShoveBox></ShoveBox>
-            <hr></hr>
             <Counter></Counter>
-            <hr />
             <RevealAnswer></RevealAnswer>
-            <hr />
             <StartAttempt></StartAttempt>
-            <hr />
             <TwoDice></TwoDice>
-            <hr />
             <ChangeType></ChangeType>
-            <hr />
             <CycleHoliday></CycleHoliday>
         </div>
     );
 }
+
+//            <h1></h1>
+//            <h1 />;
 
 export default App;
