@@ -15,6 +15,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -22,49 +27,24 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Meghan Gamble
-            </p>
 
-            <img src={require("./memeCopy.png")} alt="This is a meme" />
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
 
-            <div>
-                <ul>
-                    <li>I write the code </li>
-                    <li>I run the code</li>
-                    <li>I have a bug</li>
-                    <li>I have a feature</li>
-                </ul>
-            </div>
-
-            <Container>
-                <Row>
-                    <Col>
-                        {" "}
-                        <div
-                            className="col1"
-                            style={{ backgroundColor: "red" }}
-                        ></div>{" "}
-                        It is Saturday
-                    </Col>
-                    <Col>
-                        <div
-                            className="col2"
-                            style={{ backgroundColor: "red" }}
-                        ></div>
-                        It is Sunny Outside
-                    </Col>
-                </Row>
-            </Container>
-
-            <div>
-                <Button onClick={() => console.log("Hello World!")}>
-                    Log Hello World
-                </Button>
-            </div>
-
-            {<DoubleHalf></DoubleHalf>}
             <ChooseTeam></ChooseTeam>
             <ColoredBox></ColoredBox>
             <ShoveBox></ShoveBox>
