@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { isNumericLiteral } from "typescript";
 
 export function GiveAttempts(): JSX.Element {
     const [attempts, setattempts] = useState<number>(3);
