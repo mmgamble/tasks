@@ -39,9 +39,7 @@ export function GiveAttempts(): JSX.Element {
                 </Form.Group>
             </div>
             <div>Current Attempts: {attempts}</div>
-            <div>
-                <h3>Give Attempts</h3>
-            </div>
+            <div>Give Attempts</div>
             <div>
                 <Button
                     onClick={() => setattempts(attempts - 1)}

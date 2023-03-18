@@ -27,7 +27,7 @@ export function CheckAnswer({
                 <Form.Label>Enter Answer:</Form.Label>
                 <Form.Control value={answer} onChange={updateAns} />
             </Form.Group>
-            <h3>Check Answer</h3>
+            Check Answer
             <div>{checkAns()}</div>
         </div>
     );

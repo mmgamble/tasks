@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { ColoredBox } from "../bad-components/ColoredBox";
 
 const COLORS = [
     "red",
@@ -22,21 +20,9 @@ export function ChangeColor(): JSX.Element {
         setColor(event.target.value);
     }
 
-    function colorreturn(): JSX.Element {
-        const chosen = { color };
-        return (
-            <div className="col1" style={{ backgroundColor: "chosen" }}>
-                <span data-testid="colored-box">{color}</span>
-            </div>
-        );
-    }
-
-    const chosen = { color };
-
     return (
         <div>
-            <h3>Change Color</h3>
-
+            Change Color
             {COLORS.map((color: string) => (
                 <Form.Check
                     inline

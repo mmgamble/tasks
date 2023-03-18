@@ -59,7 +59,7 @@ export function EditMode(): JSX.Element {
     return (
         <div>
             <div>
-                <h3>Edit Mode</h3>
+                Edit Mode
                 {name} {isornot()} a student.
             </div>
             <Form.Check
