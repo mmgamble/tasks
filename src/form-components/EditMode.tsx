@@ -56,7 +56,6 @@ export function EditMode(): JSX.Element {
         }
     }
 
-    // function student
     return (
         <div>
             <div>
@@ -74,8 +73,3 @@ export function EditMode(): JSX.Element {
         </div>
     );
 }
-
-//      <Form.Group controlId="name-text">
-//        <Form.Label>Enter Name:</Form.Label>
-//      <Form.Control value={name} onChange={changename} />
-//</Form.Group>;
