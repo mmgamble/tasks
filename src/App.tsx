@@ -64,7 +64,7 @@ function App(): JSX.Element {
                 </Button>
             </div>
 
-            {<DoubleHalf></DoubleHalf>}
+            <DoubleHalf></DoubleHalf>
             <ChooseTeam></ChooseTeam>
             <ColoredBox></ColoredBox>
             <ShoveBox></ShoveBox>
