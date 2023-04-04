@@ -5,6 +5,7 @@ import { Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 import "./App.css";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
@@ -64,10 +65,9 @@ function App(): JSX.Element {
 
             <div>
                 <Button onClick={() => console.log("Hello World!")}>
-                    Log Hello World
+                    Log Hello World!
                 </Button>
             </div>
-
 
             <DoubleHalf></DoubleHalf>
             <hr></hr>
