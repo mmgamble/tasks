@@ -68,6 +68,8 @@ function App(): JSX.Element {
                 </Button>
             </div>
 
+
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
